@@ -20,7 +20,7 @@
 
 \ProvidesPackage{G2-105}[2003/07/07 v1.00 General reqs. GOST 2.105-95]
 \NeedsTeXFormat{LaTeX2e}
-
+\usepackage{amssymb,amsmath,amsfonts,latexsym,mathtext}
 \newif\if@usehyperref\@usehyperreffalse
 \newif\if@usepscyr   \@usepscyrfalse
 \newcommand\Gost@encoding{}
@@ -286,11 +286,11 @@
 \RequirePackage{icomma}
 \input{leqno.clo}
 
-\newcommand\eqref[1]{\ref{#1}}
+\renewcommand\eqref[1]{\ref{#1}}
 \def\@eqnnum{{\normalfont\normalcolor\theequation}}
 \newenvironment{table} {\@float   {table}}{\end@float   }
 \newenvironment{table*}{\@dblfloat{table}}{\end@dblfloat}
-\renewcommand{\theequation}{(\arabic{equation})}%
+\renewcommand{\theequation}{\arabic{equation}}%
 \newlength\Gost@EqRemLen
 \newlength\Gost@@EqRemLen
 \newenvironment{eqrem}{%
